@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gs_provision version="1">
+  <config version="2">
+    
+    <!-- CONFIGURACIÓN SKYN3T - OFICINA -->
+    
+    <!-- Account 1: Configuración SIP para Twilio -->
+    <item name="account.1.sip">
+      <part name="accountName">SKYN3T-OFICINA</part>
+      <part name="authId">+56229145248-office</part>
+      <part name="displayName">OFICINA - Administración</part>
+      <part name="password">SKyn3t2025_OFICINA_Office!</part>
+      <part name="register">1</part>
+      <part name="registrar">skyn3t-communities.sip.twilio.com</part>
+      <part name="registrarPort">5060</part>
+      <part name="transport">0</part>
+      <part name="userId">+56229145248-office</part>
+      <part name="accountActive">1</part>
+      <part name="accountDisplay">1</part>
+      <part name="localPort">5060</part>
+      <part name="outboundProxy"></part>
+      <part name="proxyPort">5060</part>
+    </item>
+
+    <!-- Account 1: Configuración de Red para Twilio -->
+    <item name="account.1.network">
+      <part name="natTraversal">2</part>
+      <part name="stunServer">stun.twilio.com</part>
+      <part name="stunPort">3478</part>
+      <part name="keepAliveInterval">30</part>
+      <part name="registerExpiration">1800</part>
+      <part name="reregisterBeforeExpiration">60</part>
+      <part name="symmetricRtp">1</part>
+      <part name="rtpPacketSize">20</part>
+    </item>
+
+    <!-- Account 1: Configuración de Códecs para Twilio -->
+    <item name="account.1.codec.choice">
+      <part name="1">0</part>   <!-- PCMU (G.711µ) -->
+      <part name="2">8</part>   <!-- PCMA (G.711a) -->
+      <part name="3">9</part>   <!-- G.722 -->
+      <part name="4">-1</part>  <!-- Disabled -->
+      <part name="5">-1</part>  <!-- Disabled -->
+      <part name="6">-1</part>  <!-- Disabled -->
+      <part name="7">-1</part>  <!-- Disabled -->
+      <part name="8">-1</part>  <!-- Disabled -->
+    </item>
+
+    <!-- Account 1: Configuración de Audio -->
+    <item name="account.1.audio">
+      <part name="silenceSuppression">0</part>
+      <part name="voiceActivityDetection">0</part>
+      <part name="echoCancellation">1</part>
+      <part name="dtmfViaRtp">1</part>
+      <part name="dtmfPayloadType">101</part>
+      <part name="inAudioDtmfTone">0</part>
+    </item>
+
+    <!-- Account 1: Configuración de Llamadas -->
+    <item name="account.1.call">
+      <part name="autoAnswer">0</part>
+      <part name="autoAnswerNumber"></part>
+      <part name="callWaiting">1</part>
+      <part name="conferenceEnabled">1</part>
+      <part name="preferredAccount">0</part>
+    </item>
+
+    <!-- Account 1: Configuración SIP Avanzada -->
+    <item name="account.1.sip.advanced">
+      <part name="sessionTimer">1</part>
+      <part name="sessionExpiration">240</part>
+      <part name="minSessionExpiration">90</part>
+      <part name="uacSpecifyRefresher">1</part>
+      <part name="uasSpecifyRefresher">1</part>
+      <part name="sip100relEnable">0</part>
+      <part name="sipCompactForm">0</part>
+      <part name="checkSipUserIdForIncomingInvite">0</part>
+      <part name="acceptIncomingSipFromProxyOnly">0</part>
+    </item>
+
+    <!-- Network: Configuración STUN para Twilio -->
+    <item name="network">
+      <part name="stunServer">stun.twilio.com</part>
+      <part name="cdp">0</part>
+      <part name="lldp">0</part>
+      <part name="snmp">0</part>
+      <part name="openvpn">0</part>
+    </item>
+
+    <!-- SIP: Configuración Global -->
+    <item name="sip">
+      <part name="userNatIp"></part>
+      <part name="localRtpPort">5004</part>
+      <part name="localRtpPortRange">200</part>
+      <part name="useRandomPort">0</part>
+      <part name="keepAliveInterval">30</part>
+      <part name="enableOutboundNotification">1</part>
+      <part name="testPasswordStrength">1</part>
+      <part name="allowMultipleAccounts">1</part>
+      <part name="enableRemoteSynchronization">1</part>
+      <part name="serverType">1</part>
+    </item>
+
+    <!-- DateTime: Configuración Chile -->
+    <item name="dateTime">
+      <part name="timezone">customize</part>
+    </item>
+
+    <!-- DateTime: Timezone Chile -->
+    <item name="dateTime.timezone">
+      <part name="custom">CLT+4CLST+3,M9.1.6,M4.1.6</part>
+    </item>
+
+    <!-- DateTime: Servidor NTP Chile -->
+    <item name="dateTime.ntp.server">
+      <part name="1">ntp.shoa.cl</part>
+    </item>
+
+    <item name="dateTime.ntp">
+      <part name="enableAuth">0</part>
+    </item>
+
+    <!-- Users: Credenciales -->
+    <item name="users.admin">
+      <part name="password">SKYN3T2025!</part>
+    </item>
+
+    <item name="users.user">
+      <part name="password">skyn3t123</part>
+    </item>
+
+    <!-- Features -->
+    <item name="call.dnd">
+      <part name="enable">0</part>
+      <part name="allowCallList">0</part>
+    </item>
+
+    <item name="call.conference">
+      <part name="enable">1</part>
+    </item>
+
+    <item name="call.callWaiting">
+      <part name="enable">1</part>
+    </item>
+
+    <item name="call.dial">
+      <part name="preferredAccount">0</part>
+    </item>
+
+    <item name="features.im.popup">
+      <part name="enable">0</part>
+    </item>
+
+    <item name="features.history">
+      <part name="missedCallNotification">0</part>
+    </item>
+
+    <item name="transfer.nontransfer.mpk">
+      <part name="enable">0</part>
+    </item>
+
+    <!-- Language -->
+    <item name="language">
+      <part name="gui">auto</part>
+    </item>
+
+  </config>
+</gs_provision>
